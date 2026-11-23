@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's for dinner</title>
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <!--Start Navbar Sec-->
+    <nav class="navbar navbar-expand-lg bg-light align-items-center">
+      <div class="container">
+        <div class="nav-header">
+          <div class="nav-icon"><i class="fa-solid fa-utensils fa-lg" style="color: white"></i></div>
+          <div class="nav-text">
+            <h1>What's For Dinner</h1>
+            <p>Your daily meal inspiration</p>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fa-lg" style="color: rgb(74, 85, 101)"></i>
+        </button>
+        <div class="collapse navbar-collapse m-lg-0 p-lg-0" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center d-lg-flex">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><i class="fa-solid fa-bookmark fa-lg nav-hover" style="color: rgb(74, 85, 101)"></i>
+                <span class="d-lg-none nav-hover">Saved Recipes</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-clock-rotate-left fa-lg nav-hover" style="color: rgb(74, 85, 101)"></i>
+                <span class="d-lg-none nav-hover">Recent</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                ><i class="fa-solid fa-gear fa-lg nav-hover" style="color: rgb(74, 85, 101)"></i>
+                <span class="d-lg-none nav-hover">Setting</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                ><img src="./Images/avatar-3.jpg" alt="profile" /><span class="d-lg-none nav-hover">Profile</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--End Navbar Sec-->
+    <!--Start Recipes Sec-->
+    <div class="recipe">
+      <div class="container">
+        <div class="row align-items-stretch">
+          <div class="col-12 first col-lg-5"><div class="recipe-img" id="imgSec"></div></div>
+          <div class="col-12 col-lg-7 second rounded-bottom-5">
+            <div class="start-buttons">
+              <div><i class="fa-solid fa-share-nodes" style="color: rgb(245, 73, 0)"></i></div>
+              <div><i class="fa-solid fa-bookmark" style="color: rgb(245, 73, 0)"></i></div>
+            </div>
+            <div class="info" id="infoSec"></div>
+            <ul class="nav nav-pills mb-3 d-flex recipe-tabs" id="pills-tab" role="tablist">
+              <li class="nav-item ststic" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true">
+                  <i class="fa-solid fa-list-check"></i> Ingredients
+                </button>
+              </li>
+              <li class="nav-item ststic" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false">
+                  <i class="fa-solid fa-book-open fa-sm"></i> Instructions
+                </button>
+              </li>
+              <li class="nav-item ststic" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-contact-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false">
+                  <i class="fa-solid fa-chart-pie fa-sm"></i> Nutrition
+                </button>
+              </li>
+              <li class="nav-item ststic" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-disabled-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-disabled"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-disabled"
+                  aria-selected="false">
+                  <i class="fa-solid fa-lightbulb"></i> Chef's Tips
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active ingredient-content"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+                tabindex="0">
+                <ul id="ingredientSec"></ul>
+              </div>
+              <div
+                class="tab-pane fade instruction-content"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+                tabindex="0">
+                <div id="instructionSec"></div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-contact"
+                role="tabpanel"
+                aria-labelledby="pills-contact-tab"
+                tabindex="0">
+                <div class="nutrition" id="nutritionSec"></div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-disabled"
+                role="tabpanel"
+                aria-labelledby="pills-disabled-tab"
+                tabindex="0">
+                <div class="tips" id="tipsSec"></div>
+              </div>
+            </div>
+            <div class="last">
+              <button class="button" onclick="getRandomRecipe()">
+                <i class="fa-solid fa-arrows-rotate fa-sm" style="color: rgb(255, 255, 255)"></i
+                ><span>Try Another Recipe</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Recipes Sec-->
+    <script src="./Java_script/main.js"></script>
+    <script src="./Java_script/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
